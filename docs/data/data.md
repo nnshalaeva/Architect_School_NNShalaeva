@@ -52,7 +52,15 @@ namespace Conference {
         endTime : time
     }
 
+    Class Feedback {
+        id : long
+        rate : int 
+        comment : string 
+        sessionId : long 
+    }
+
     Class ConferenceMaterials { 
+        id : long 
         name : string
         description : string 
         link : string
@@ -116,21 +124,22 @@ namespace Conference {
         offline 
     }
 
-    Conference *-- "1..*" ConferenceProgram
-    ConferenceProgram *-- "1..*" ConferenceThread
-    ConferenceThread *-- "1..*" ConferenceSession
+    Conference -- "1..*" ConferenceProgram
+    ConferenceProgram -- "1..*" ConferenceThread
+    ConferenceThread -- "1..*" ConferenceSession
     ConferenceSession -- SesstionType
     ConferenceRegistrations -- RegistrationType
     Conference -- Employee
     Conference -- OrgGroup
     ConferenceProgram -- Employee
     ConferenceThread -- Employee
-    ConferenceSession *-- "1..*" ConferenceSpeaker
-    ConferenceSession *-- "1..*" ConferenceMaterials
-    Conference  *-- "0..*" ConferenceRegistrations
+    ConferenceSession -- "1..*" ConferenceSpeaker
+    ConferenceSession -- "1..*" ConferenceMaterials
+    Conference  -- "0..*" ConferenceRegistrations
     ConferenceRegistrations -- ConferenceParticipant
     ConferenceSession -- Employee
-    OrgGroup *-- "1..*" Employee
+    OrgGroup -- "1..*" Employee
+    ConferenceSession -- "1..*"  Feedback 
 }
 
 

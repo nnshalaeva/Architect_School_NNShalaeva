@@ -128,15 +128,50 @@ https://confluence.mts.ru/pages/viewpage.action?pageId=375782119
 ```plantuml
 @startuml
 left to right direction
-actor "Food Critic" as fc
-rectangle Restaurant {
-  usecase "Eat Food" as UC1
-  usecase "Pay for Food" as UC2
-  usecase "Drink" as UC3
+actor "OrgGroup" as og
+rectangle Conference {
+  usecase "Заполнить данные конференции" as UC11
+  usecase "Создать потоки конференции" as UC12
+  usecase "Оформить расписание сессий конференции" as UC13
+  usecase "Проверить материалы доклада спикера" as UC14
+  usecase "Допустить спикера к выступлению" as UC15
+  usecase "Получить отзывы по конференции" as UC16
+  usecase "Работа с трансляцией конференции" as UC17
 }
-fc --> UC1
-fc --> UC2
-fc --> UC3
+og --> UC11
+og --> UC12
+og --> UC13
+og --> UC14
+og --> UC15
+og --> UC16
+og --> UC17
+
+left to right direction
+actor "Participant" as p
+rectangle Participant {
+  usecase "Регистрация участника" as UC21
+  usecase "Оплата участия" as UC22
+  usecase "Просмотр конференции" as UC23
+  usecase "Оценить доклад" as UC24
+}
+p --> UC21
+p --> UC22
+p --> UC23
+p --> UC24
+
+
+left to right direction
+actor "Speaker" as s
+rectangle Speaker {
+  usecase "Подать заявку на участие в конференции" as UC31
+  usecase "Получить ревью материалов" as UC32
+  usecase "Получить апрув на выступление" as UC33
+  usecase "Получить отзывы на выступление" as UC34
+}
+s --> UC31
+s --> UC32
+s --> UC33
+s --> UC34
 @enduml
 ```
 
@@ -144,7 +179,22 @@ fc --> UC3
 
 | ID     | Описание                                          |
 |--------|---------------------------------------------------|
-| UC.001 | *[Название сценария использования](uc/uc.001.md)* |
+| UC.11 | *[Заполнить данные конференции](uc/uc11.md)* |
+| UC.12 | *[Создать потоки конференции](uc/uc12.md)* |
+| UC.13 | *[Оформить расписание сессий конференции](uc/uc13.md)* |
+| UC.14 | *[Проверить материалы доклада спикера](uc/uc14.md)* |
+| UC.15 | *[Допустить спикера к выступлению](uc/uc15.md)* |
+| UC.16 | *[Получить отзывы по конференции](uc/uc16.md)* |
+| UC.17 | *[Работа с трансляцией конференции](uc/uc17.md)* |
+| UC.21 | *[Регистрация участника](uc/uc21.md)* |
+| UC.22 | *[Оплата участия](uc/uc22.md)* |
+| UC.23 | *[Просмотр конференции](uc/uc23.md)* |
+| UC.24 | *[Оценить доклад](uc/uc24.md)* |
+| UC.31 | *[Подать заявку на участие в конференциия](uc/uc31.md)* |
+| UC.32 | *[Получить ревью материалов](uc/uc32.md)* |
+| UC.33 | *[Получить апрув на выступление](uc/uc33.md)* |
+| UC.34 | *[Получить отзывы на выступление](uc/uc34.md)* |
+
 
 ### Функциональные требования
 <!-- Описание требований к функциям, реализуемым системой. Требование может быть привязано к сценарию использования или быть общим 
