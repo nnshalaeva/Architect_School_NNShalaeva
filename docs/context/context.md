@@ -1,4 +1,4 @@
-# Контекст решения
+# Контекстная диаграмма
 <!-- Окружение системы (роли, участники, внешние системы) и связи системы с ним. Диаграмма контекста C4 и текстовое описание. 
 Подробнее: https://confluence.mts.ru/pages/viewpage.action?pageId=375783261
 -->
@@ -8,14 +8,19 @@
 
 LAYOUT_WITH_LEGEND()
 
-Person(pbc, "Personal Banking Customer", "A customer of the bank, with personal bank accounts.")
-System(ibs, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
+Person(og, "Org group member", "A conference organization group member")
+Person(s, "Speaker", "A conference Speaker")
+Person(p, "Participant", "A conference participant")
+System(confApp, "Conference Organization App", "Allows to organize conference")
 System_Ext(es, "E-mail system", "The internal Microsoft Exchange e-mail system.")
-System_Ext(mbs, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+System_Ext(mbs, "3rd payment party", "Allows users to pay for conference participation")
+System_Ext(css, "3rd party product for conference streaming", "product to organize  conference streaming")
 
-Rel(pbc, ibs, "Uses")
-Rel(es, pbc, "Sends e-mails to")
-Rel(ibs, es, "Sends e-mails", "SMTP")
-Rel(ibs, mbs, "Uses")
+Rel(og, confApp, "Uses")
+Rel(p, confApp, "Uses")
+Rel(s, confApp, "Uses")
+Rel(confApp, es, "Sends e-mails", "SMTP")
+Rel(confApp, mbs, "Uses")
+Rel(confApp, css, "integrates")
 @enduml
 ```
