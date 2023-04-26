@@ -8,89 +8,130 @@
 ```plantuml
 @startuml
 ' Логическая модель данных в варианте UML Class Diagram (альтернатива ER-диаграмме).
-namespace ShoppingCart {
+namespace Conference {
 
- class ShoppingCart
- {
-  id : string
-  createDate : datetime
-  updateDate : datetime
-  customer : Customer
-  price : ShoppingCartPrice
-  cartItems : CartItem[]
- }
+    Class Conference {
+        id : long
+        theme : string
+        description : string 
+        date : date
+        conferenceProgram : ConferenceProgram
+        conferenceOwner : Employee
+        conferenceOrgGroup : OrgGroup
+        registrations : ConferenceRegistrations[]
+    }
 
- class ShoppingCartPrice
- {
-  type : CartItemPrice
- }
- class CartItemPrice
- {
-  type : CartItemPriceType
- }
+    Class ConferenceProgram {
+        id : long
+        conferenceThreads : ConferenceThread[]
+        responsiblePerson : Employee
+    }
 
- enum CartPriceType
- {
-  total
-  grandTotal
-  offeringDiscount
-  couponsDiscount
- }
+    Class ConferenceThread {
+        id : long
+        theme : string
+        description : string 
+        responsiblePerson : Employee
+        sessionSchedule : SessionsSlots[]
+    }
 
- class CartItem
- {
-  id : string
-  quantity : int
-  offering : Offering
-  relationship : CartItemRelationShip[]
-  price : CartItemPrice[]
-  status : CartItemStatus
- }
+    Class ConferenceSession {
+        id : long
+        theme : string
+        description : string 
+        sessionType : SessionType
+        sessionSpeaker : ConferenceSpeaker[]
+        materialsReviewed : boolean
+        materialsApproved : boolean
+        reviewer : Employee
+        approver : Employee
+        materials : ConferenceMaterials[]
+        room : string   
+        date : date
+        startTime : time
+        endTime : time
+    }
 
-  class Customer
- {
-  id : string
- }
- 
- class Offering
- {
-  id : string
-  isQuantifiable : boolean
-  actionType : OfferingActionType
-  validFor : ValidFor
- }
-  
- class ProductSpecificationRef
- {
-  id : string
- }
- 
- ShoppingCart *-- "1..*" ShoppingCartPrice
- ShoppingCartPrice -- CartPriceType
- ShoppingCart *-- "*" CartItem
- CartItem *-- "*" CartItemPrice
- CartItemPrice -- CartPriceType
- CartItem *-- "1" Offering
- Offering *-- "1" ProductSpecificationRef
- Offering *-- "0..1" ProductConfiguration
- ShoppingCart *-- "1" Customer
+    Class ConferenceMaterials { 
+        name : string
+        description : string 
+        link : string
+    }
+
+    Class ConferenceRegistrations {
+        id : long
+        participant : ConferenceParticipant
+        resgistrationType : resgistrationType 
+        paid : boolean       
+    }
+
+    Class Employee {
+        id : long
+        firstName : string
+        lastName  : string 
+        phone : string
+        email : string 
+        employeeId : long
+    }
+
+    Class ConferenceParticipant {
+        id : long
+        firstName : string
+        lastName  : string 
+        phone : string
+        email : string 
+    }
+
+    Class ConferenceSpeaker {
+        id : long
+        firstName : string
+        lastName  : string 
+        phone : string
+        email : string 
+    }
+
+    Class OrgGroup {
+        id : long
+        organizer : Employee
+        hrTeam : Employee[]
+        marketingTeam : Employee[]
+        orgGroupEmail : string 
+    }
+
+    Class ConferenceThread {
+        id : long
+        theme : string
+        description : string 
+        Sessions : Session[]
+    }
+
+    enum SesstionType {
+        presentation
+        workshop
+        discussion
+    }
+
+    enum RegistrationType {
+        online
+        offline 
+    }
+
+    Conference *-- "1..*" ConferenceProgram
+    ConferenceProgram *-- "1..*" ConferenceThread
+    ConferenceThread *-- "1..*" ConferenceSession
+    ConferenceSession -- SesstionType
+    ConferenceRegistrations -- RegistrationType
+    Conference -- Employee
+    Conference -- OrgGroup
+    ConferenceProgram -- Employee
+    ConferenceThread -- Employee
+    ConferenceSession *-- "1..*" ConferenceSpeaker
+    ConferenceSession *-- "1..*" ConferenceMaterials
+    Conference  *-- "0..*" ConferenceRegistrations
+    ConferenceRegistrations -- ConferenceParticipant
+    ConferenceSession -- Employee
 }
 
-namespace Ordering {
- ProductOrder *-- OrderItem
- OrderItem *-- Product
- Product *-- ProductSpecificationRef
- ProductOrder *-- Party
-}
 
-namespace ProductCatalog {
- ShoppingCart.ProductSpecificationRef ..> ProductSpecification : ref
- Ordering.ProductSpecificationRef ..> ProductSpecification : ref
-}
-
-namespace CX {
- ShoppingCart.Customer ..> Customer : ref
- Ordering.Party ..> Customer : ref
-}
 @enduml
 ```
