@@ -130,6 +130,7 @@ namespace Conference {
     Conference  *-- "0..*" ConferenceRegistrations
     ConferenceRegistrations -- ConferenceParticipant
     ConferenceSession -- Employee
+    OrgGroup *-- "1..*" Employee
 }
 
 
