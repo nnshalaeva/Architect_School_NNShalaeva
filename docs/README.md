@@ -255,7 +255,7 @@ s --> UC34
 Подробнее: https://confluence.mts.ru/pages/viewpage.action?pageId=421162308
 -->
 - [ADR.001 Выбор типа системы ACID, BASE](adr/adr001.md)
-- [ADR.002 Уточнение выбора типа системы на основе CAP, PACELC](adr/adr002.md)
+- [ADR.002 Уточнение выбора типа системы на основе CAP: P (A/C)](adr/adr002.md)
 - [ADR.003 Выбор метода интеграции](adr/adr003.md)
 - [ADR.004 Выбор структуры интеграции](adr/adr004.md)
 - [ADR.005 Выбор типа интеграционного взаимодействия](adr/adr005.md)
