@@ -19,7 +19,7 @@ System_Ext(css, "3rd party product for conference streaming", "product to organi
 Rel(og, confApp, "Uses")
 Rel(p, confApp, "Uses")
 Rel(s, confApp, "Uses")
-Rel(confApp, es, "Sends e-mails using", "SMTP")
+Rel(confApp, es, "Sends e-mails", "SMTP")
 Rel(confApp, mbs, "Uses")
 Rel(confApp, css, "integrates")
 @enduml
