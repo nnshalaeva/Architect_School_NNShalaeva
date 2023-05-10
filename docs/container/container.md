@@ -17,8 +17,10 @@ Person(p, "Participant", "Участник конференции")
 
 System_Boundary(confApp, "Conference Organization App") {
     
-    Container(SPA, "Веб-приложение (SPA)", "", "Веб-версия системы организации конференций")
-    Container(mobileApp, "Мобильное приложение", "", "Мобильное приложение организации конференций")
+    Container_Boundary(frontApp, "Front apps") {
+        Container(SPA, "Веб-приложение (SPA)", "", "Веб-версия системы организации конференций")
+        Container(mobileApp, "Мобильное приложение", "", "Мобильное приложение организации конференций")
+    }
 
     Container_Boundary(confServ, "Conference API") {
         Container(conference_service, "Conference API", "", "API просмотра и управления конференцией", $tags = "microService")      
