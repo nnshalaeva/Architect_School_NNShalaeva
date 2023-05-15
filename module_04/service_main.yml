@@ -16,7 +16,7 @@ paths:
         in: path
         required: true
         schema:
-          $ref: '#/components/schemas/title'
+          $ref: '#/components/schemas/Title'
       responses:
         200:
           description: Presentation with Author by title
@@ -40,6 +40,10 @@ components:
   schemas:
     Author_id:
       description: The unique identifier of author
+      type: string
+      
+    Title:
+      description: The title of presentation
       type: string
 
     Presentation:
