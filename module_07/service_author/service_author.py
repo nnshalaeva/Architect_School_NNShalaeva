@@ -5,12 +5,12 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
+
 # Start FastAPI
 app = FastAPI()
 client = motor.motor_asyncio.AsyncIOMotorClient(
     "mongodb://admin:admin@db-node-ex01/archdb?retryWrites=true&w=majority", authSource="admin")
 db = client.college
-
 
 class PyObjectId(ObjectId):
     @classmethod
@@ -63,7 +63,11 @@ async def create_author(author: AuthorModel = Body(...)):
 
 @app.get("/authors/{author_id}")
 async def read_author(author_id: str):
-    author = await db["authors"].find_one({"_id": author_id})
+    try:
+        author_id = PyObjectId(author_id)
+    except BaseException:
+        author_id
+    author = await db["authors"].find_one({"_id": author_id}, {'_id': 0})
     if author is None:
         raise HTTPException(status_code=404, detail="Author not found")
     return JSONResponse(status_code=status.HTTP_200_OK, content=author)

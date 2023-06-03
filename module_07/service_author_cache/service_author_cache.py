@@ -66,8 +66,11 @@ async def read_author(author_id: str):
     redis_result = await redis.get(author_id)
     if redis_result:
         return json.loads(redis_result)
-
-    author = await db["authors"].find_one({"_id": author_id})
+    try:
+        author_id = PyObjectId(author_id)
+    except BaseException:
+        author_id
+    author = await db["authors"].find_one({"_id": author_id}, {'_id': 0})
     if author is None:
         raise HTTPException(status_code=404, detail="Author not found")
     await redis.set(author_id, json.dumps(author))
