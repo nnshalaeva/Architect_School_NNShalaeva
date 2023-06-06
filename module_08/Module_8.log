@@ -1,0 +1,1942 @@
+2023-06-06 17:12:28 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:12:28 WARNING:root:
+2023-06-06 17:12:38 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:12:39 WARNING:root:
+2023-06-06 17:12:49 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:12:49 WARNING:root:
+2023-06-06 17:13:47 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:13:47 WARNING:root:
+2023-06-06 17:13:57 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:13:57 WARNING:root:
+2023-06-06 17:14:07 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:14:07 WARNING:root:
+2023-06-06 17:14:17 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:14:17 WARNING:root:
+2023-06-06 17:14:18 --- Logging error ---
+2023-06-06 17:14:18 Traceback (most recent call last):
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:14:18     conn = connection.create_connection(
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:14:18     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:14:18   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:14:18     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:14:18 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:14:18 
+2023-06-06 17:14:18 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:18 
+2023-06-06 17:14:18 Traceback (most recent call last):
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:14:18     httplib_response = self._make_request(
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:14:18     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:14:18     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:14:18   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:14:18     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:14:18   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:14:18     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:14:18   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:14:18     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:14:18   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:14:18     self.send(msg)
+2023-06-06 17:14:18   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:14:18     self.connect()
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:14:18     conn = self._new_conn()
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:14:18     raise NewConnectionError(
+2023-06-06 17:14:18 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff84f2eb30>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:14:18 
+2023-06-06 17:14:18 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:18 
+2023-06-06 17:14:18 Traceback (most recent call last):
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:14:18     resp = conn.urlopen(
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:14:18     retries = retries.increment(
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:14:18     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:14:18 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2eb30>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:14:18 
+2023-06-06 17:14:18 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:18 
+2023-06-06 17:14:18 Traceback (most recent call last):
+2023-06-06 17:14:18   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:14:18     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:14:18     return request("get", url, params=params, **kwargs)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:14:18     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:14:18     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:12:35 Moore
+2023-06-06 17:12:35 INFO:     172.19.0.1:34978 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:12:37 Moore
+2023-06-06 17:12:37 INFO:     172.19.0.1:34978 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:12:38 Moore
+2023-06-06 17:12:38 INFO:     172.19.0.1:34978 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:12:39 Moore
+2023-06-06 17:12:39 INFO:     172.19.0.1:34978 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:12:40 Moore
+2023-06-06 17:12:40 INFO:     172.19.0.1:34978 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:12:41 Moore
+2023-06-06 17:12:41 INFO:     172.19.0.1:34978 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:14:18     r = adapter.send(request, **kwargs)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:14:18     raise ConnectionError(e, request=request)
+2023-06-06 17:14:18 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2eb30>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:14:18 
+2023-06-06 17:14:18 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:18 
+2023-06-06 17:14:18 Traceback (most recent call last):
+2023-06-06 17:14:18   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:14:18     msg = self.format(record)
+2023-06-06 17:14:18   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:14:18     return fmt.format(record)
+2023-06-06 17:14:18   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:14:18     record.message = record.getMessage()
+2023-06-06 17:14:18   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:14:18     msg = msg % self.args
+2023-06-06 17:14:18 TypeError: not all arguments converted during string formatting
+2023-06-06 17:14:18 Call stack:
+2023-06-06 17:14:18   File "<string>", line 1, in <module>
+2023-06-06 17:14:18   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:14:18     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:14:18   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:14:18     return self._bootstrap(parent_sentinel)
+2023-06-06 17:14:18   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:14:18     self.run()
+2023-06-06 17:14:18   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:14:18     self._target(*self._args, **self._kwargs)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:14:18     target(sockets=sockets)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:14:18     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:14:18   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:14:18     return loop.run_until_complete(main)
+2023-06-06 17:14:18   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:14:18     self.run_forever()
+2023-06-06 17:14:18   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:14:18     self._run_once()
+2023-06-06 17:14:18   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:14:18     handle._run()
+2023-06-06 17:14:18   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:14:18     self._context.run(self._callback, *self._args)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:14:18     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:14:18     return await self.app(scope, receive, send)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:14:18     await super().__call__(scope, receive, send)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:14:18     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:14:18     await self.app(scope, receive, _send)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:14:18     await self.app(scope, receive, sender)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:14:18     await self.app(scope, receive, send)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:14:18     await route.handle(scope, receive, send)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:14:18     await self.app(scope, receive, send)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:14:18     response = await func(request)
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:14:18     raw_response = await run_endpoint_function(
+2023-06-06 17:14:18   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:14:18     return await dependant.call(**values)
+2023-06-06 17:14:18   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:14:18     author = get_author(presentation.author_id)
+2023-06-06 17:14:18   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:14:18     return call(function, *args, **kwargs)
+2023-06-06 17:14:18   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:14:18     return func(*args, **kwargs)
+2023-06-06 17:14:18   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:14:18     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:14:18 Message: '>>> Error Connecting:'
+2023-06-06 17:14:18 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2eb30>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:14:20 --- Logging error ---
+2023-06-06 17:14:20 Traceback (most recent call last):
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:14:20     conn = connection.create_connection(
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:14:20     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:14:20   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:14:20     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:14:20 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:14:20 
+2023-06-06 17:14:18 INFO:     172.19.0.1:48824 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:14:20 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:20 
+2023-06-06 17:14:20 Traceback (most recent call last):
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:14:20     httplib_response = self._make_request(
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:14:20     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:14:20     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:14:20   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:14:20     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:14:20   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:14:20     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:14:20   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:14:20     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:14:20   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:14:20     self.send(msg)
+2023-06-06 17:14:20   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:14:20     self.connect()
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:14:20     conn = self._new_conn()
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:14:20     raise NewConnectionError(
+2023-06-06 17:14:20 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff84f2c3d0>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:14:20 
+2023-06-06 17:14:20 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:20 
+2023-06-06 17:14:20 Traceback (most recent call last):
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:14:20     resp = conn.urlopen(
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:14:20     retries = retries.increment(
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:14:20     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:14:20 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2c3d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:14:20 
+2023-06-06 17:14:20 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:20 
+2023-06-06 17:14:20 Traceback (most recent call last):
+2023-06-06 17:14:20   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:14:20     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:14:20     return request("get", url, params=params, **kwargs)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:14:20     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:14:20     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:14:20     r = adapter.send(request, **kwargs)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:14:20     raise ConnectionError(e, request=request)
+2023-06-06 17:14:20 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2c3d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:14:20 
+2023-06-06 17:14:20 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:20 
+2023-06-06 17:14:20 Traceback (most recent call last):
+2023-06-06 17:14:20   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:14:20     msg = self.format(record)
+2023-06-06 17:14:20   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:14:20     return fmt.format(record)
+2023-06-06 17:14:20   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:14:20     record.message = record.getMessage()
+2023-06-06 17:14:20   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:14:20     msg = msg % self.args
+2023-06-06 17:14:20 TypeError: not all arguments converted during string formatting
+2023-06-06 17:14:20 Call stack:
+2023-06-06 17:14:20   File "<string>", line 1, in <module>
+2023-06-06 17:14:20   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:14:20     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:14:20   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:14:20     return self._bootstrap(parent_sentinel)
+2023-06-06 17:14:20   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:14:20     self.run()
+2023-06-06 17:14:20   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:14:20     self._target(*self._args, **self._kwargs)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:14:20     target(sockets=sockets)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:14:20     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:14:20   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:14:20     return loop.run_until_complete(main)
+2023-06-06 17:14:20   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:14:20     self.run_forever()
+2023-06-06 17:14:20   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:14:20     self._run_once()
+2023-06-06 17:14:20   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:14:20     handle._run()
+2023-06-06 17:14:20   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:14:20     self._context.run(self._callback, *self._args)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:14:20     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:14:20     return await self.app(scope, receive, send)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:14:20     await super().__call__(scope, receive, send)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:14:20     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:14:20     await self.app(scope, receive, _send)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:14:20     await self.app(scope, receive, sender)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:14:20     await self.app(scope, receive, send)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:14:20     await route.handle(scope, receive, send)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:14:20     await self.app(scope, receive, send)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:14:20     response = await func(request)
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:14:20     raw_response = await run_endpoint_function(
+2023-06-06 17:14:20   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:14:20     return await dependant.call(**values)
+2023-06-06 17:14:20   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:14:20     author = get_author(presentation.author_id)
+2023-06-06 17:14:20   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:14:20     return call(function, *args, **kwargs)
+2023-06-06 17:14:20   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:14:20     return func(*args, **kwargs)
+2023-06-06 17:14:20   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:14:20     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:14:20 Message: '>>> Error Connecting:'
+2023-06-06 17:14:20 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2c3d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:14:21 --- Logging error ---
+2023-06-06 17:14:21 Traceback (most recent call last):
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:14:21     conn = connection.create_connection(
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:14:21     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:14:21   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:14:21     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:14:21 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:14:21 
+2023-06-06 17:14:21 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:21 
+2023-06-06 17:14:21 Traceback (most recent call last):
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:14:21     httplib_response = self._make_request(
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:14:21     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:14:21     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:14:21   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:14:21     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:14:21   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:14:21     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:14:21   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:14:21     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:14:21   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:14:21     self.send(msg)
+2023-06-06 17:14:21   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:14:21     self.connect()
+2023-06-06 17:14:20 INFO:     172.19.0.1:48824 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:14:21     conn = self._new_conn()
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:14:21     raise NewConnectionError(
+2023-06-06 17:14:21 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff84f2c040>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:14:21 
+2023-06-06 17:14:21 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:21 
+2023-06-06 17:14:21 Traceback (most recent call last):
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:14:21     resp = conn.urlopen(
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:14:21     retries = retries.increment(
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:14:21     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:14:21 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2c040>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:14:21 
+2023-06-06 17:14:21 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:21 
+2023-06-06 17:14:21 Traceback (most recent call last):
+2023-06-06 17:14:21   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:14:21     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:14:21     return request("get", url, params=params, **kwargs)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:14:21     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:14:21     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:14:21     r = adapter.send(request, **kwargs)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:14:21     raise ConnectionError(e, request=request)
+2023-06-06 17:14:21 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2c040>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:14:21 
+2023-06-06 17:14:21 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:21 
+2023-06-06 17:14:21 Traceback (most recent call last):
+2023-06-06 17:14:21   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:14:21     msg = self.format(record)
+2023-06-06 17:14:21   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:14:21     return fmt.format(record)
+2023-06-06 17:14:21   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:14:21     record.message = record.getMessage()
+2023-06-06 17:14:21   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:14:21     msg = msg % self.args
+2023-06-06 17:14:21 TypeError: not all arguments converted during string formatting
+2023-06-06 17:14:21 Call stack:
+2023-06-06 17:14:21   File "<string>", line 1, in <module>
+2023-06-06 17:14:21   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:14:21     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:14:21   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:14:21     return self._bootstrap(parent_sentinel)
+2023-06-06 17:14:21   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:14:21     self.run()
+2023-06-06 17:14:21   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:14:21     self._target(*self._args, **self._kwargs)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:14:21     target(sockets=sockets)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:14:21     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:14:21   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:14:21     return loop.run_until_complete(main)
+2023-06-06 17:14:21   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:14:21     self.run_forever()
+2023-06-06 17:14:21   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:14:21     self._run_once()
+2023-06-06 17:14:21   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:14:21     handle._run()
+2023-06-06 17:14:21   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:14:21     self._context.run(self._callback, *self._args)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:14:21     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:14:21     return await self.app(scope, receive, send)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:14:21     await super().__call__(scope, receive, send)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:14:21     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:14:21     await self.app(scope, receive, _send)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:14:21     await self.app(scope, receive, sender)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:14:21     await self.app(scope, receive, send)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:14:21     await route.handle(scope, receive, send)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:14:21     await self.app(scope, receive, send)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:14:21     response = await func(request)
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:14:21     raw_response = await run_endpoint_function(
+2023-06-06 17:14:21   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:14:21     return await dependant.call(**values)
+2023-06-06 17:14:21   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:14:21     author = get_author(presentation.author_id)
+2023-06-06 17:14:21   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:14:21     return call(function, *args, **kwargs)
+2023-06-06 17:14:21   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:14:21     return func(*args, **kwargs)
+2023-06-06 17:14:21   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:14:21     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:14:21 Message: '>>> Error Connecting:'
+2023-06-06 17:14:21 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2c040>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:14:27 WARNING:root:Circuit "get_author" is "closed", failures: 3
+2023-06-06 17:14:27 WARNING:root:
+2023-06-06 17:14:37 WARNING:root:Circuit "get_author" is "closed", failures: 3
+2023-06-06 17:14:37 WARNING:root:
+2023-06-06 17:14:47 WARNING:root:Circuit "get_author" is "closed", failures: 3
+2023-06-06 17:14:47 WARNING:root:
+2023-06-06 17:14:55 --- Logging error ---
+2023-06-06 17:14:55 Traceback (most recent call last):
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:14:55     conn = connection.create_connection(
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:14:55     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:14:55   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:14:55     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:14:55 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:14:55 
+2023-06-06 17:14:55 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:55 
+2023-06-06 17:14:55 Traceback (most recent call last):
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:14:55     httplib_response = self._make_request(
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:14:55     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:14:55     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:14:55   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:14:55     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:14:55   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:14:55     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:14:55   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:14:55     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:14:55   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:14:55     self.send(msg)
+2023-06-06 17:14:55   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:14:55     self.connect()
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:14:55     conn = self._new_conn()
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:14:55     raise NewConnectionError(
+2023-06-06 17:14:55 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff84f2fc70>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:14:55 
+2023-06-06 17:14:55 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:55 
+2023-06-06 17:14:55 Traceback (most recent call last):
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:14:55     resp = conn.urlopen(
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:14:55     retries = retries.increment(
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:14:55     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:14:55 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2fc70>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:14:55 
+2023-06-06 17:14:55 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:55 
+2023-06-06 17:14:55 Traceback (most recent call last):
+2023-06-06 17:14:55   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:14:55     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:14:55     return request("get", url, params=params, **kwargs)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:14:55     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:14:21 INFO:     172.19.0.1:48824 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:14:55     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:14:55     r = adapter.send(request, **kwargs)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:14:55     raise ConnectionError(e, request=request)
+2023-06-06 17:14:55 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2fc70>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:14:55 
+2023-06-06 17:14:55 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:55 
+2023-06-06 17:14:55 Traceback (most recent call last):
+2023-06-06 17:14:55   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:14:55     msg = self.format(record)
+2023-06-06 17:14:55   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:14:55     return fmt.format(record)
+2023-06-06 17:14:55   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:14:55     record.message = record.getMessage()
+2023-06-06 17:14:55   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:14:55     msg = msg % self.args
+2023-06-06 17:14:55 TypeError: not all arguments converted during string formatting
+2023-06-06 17:14:55 Call stack:
+2023-06-06 17:14:55   File "<string>", line 1, in <module>
+2023-06-06 17:14:55   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:14:55     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:14:55   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:14:55     return self._bootstrap(parent_sentinel)
+2023-06-06 17:14:55   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:14:55     self.run()
+2023-06-06 17:14:55   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:14:55     self._target(*self._args, **self._kwargs)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:14:55     target(sockets=sockets)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:14:55     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:14:55   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:14:55     return loop.run_until_complete(main)
+2023-06-06 17:14:55   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:14:55     self.run_forever()
+2023-06-06 17:14:55   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:14:55     self._run_once()
+2023-06-06 17:14:55   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:14:55     handle._run()
+2023-06-06 17:14:55   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:14:55     self._context.run(self._callback, *self._args)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:14:55     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:14:55     return await self.app(scope, receive, send)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:14:55     await super().__call__(scope, receive, send)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:14:55     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:14:55     await self.app(scope, receive, _send)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:14:55     await self.app(scope, receive, sender)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:14:55     await self.app(scope, receive, send)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:14:55     await route.handle(scope, receive, send)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:14:55     await self.app(scope, receive, send)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:14:55     response = await func(request)
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:14:55     raw_response = await run_endpoint_function(
+2023-06-06 17:14:55   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:14:55     return await dependant.call(**values)
+2023-06-06 17:14:55   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:14:55     author = get_author(presentation.author_id)
+2023-06-06 17:14:55   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:14:55     return call(function, *args, **kwargs)
+2023-06-06 17:14:55   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:14:55     return func(*args, **kwargs)
+2023-06-06 17:14:55   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:14:55     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:14:55 Message: '>>> Error Connecting:'
+2023-06-06 17:14:55 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2fc70>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:14:56 --- Logging error ---
+2023-06-06 17:14:56 Traceback (most recent call last):
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:14:56     conn = connection.create_connection(
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:14:56     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:14:56   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:14:56     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:14:55 INFO:     172.19.0.1:48818 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:14:56 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:14:56 
+2023-06-06 17:14:56 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:56 
+2023-06-06 17:14:56 Traceback (most recent call last):
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:14:56     httplib_response = self._make_request(
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:14:56     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:14:56     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:14:56   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:14:56     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:14:56   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:14:56     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:14:56   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:14:56     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:14:56   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:14:56     self.send(msg)
+2023-06-06 17:14:56   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:14:56     self.connect()
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:14:56     conn = self._new_conn()
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:14:56     raise NewConnectionError(
+2023-06-06 17:14:56 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff84f2c040>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:14:56 
+2023-06-06 17:14:56 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:56 
+2023-06-06 17:14:56 Traceback (most recent call last):
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:14:56     resp = conn.urlopen(
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:14:56     retries = retries.increment(
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:14:56     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:14:56 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2c040>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:14:56 
+2023-06-06 17:14:56 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:56 
+2023-06-06 17:14:56 Traceback (most recent call last):
+2023-06-06 17:14:56   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:14:56     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:14:56     return request("get", url, params=params, **kwargs)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:14:56     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:14:56     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:14:56     r = adapter.send(request, **kwargs)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:14:56     raise ConnectionError(e, request=request)
+2023-06-06 17:14:56 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2c040>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:14:56 
+2023-06-06 17:14:56 During handling of the above exception, another exception occurred:
+2023-06-06 17:14:56 
+2023-06-06 17:14:56 Traceback (most recent call last):
+2023-06-06 17:14:56   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:14:56     msg = self.format(record)
+2023-06-06 17:14:56   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:14:56     return fmt.format(record)
+2023-06-06 17:14:56   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:14:56     record.message = record.getMessage()
+2023-06-06 17:14:56   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:14:56     msg = msg % self.args
+2023-06-06 17:14:56 TypeError: not all arguments converted during string formatting
+2023-06-06 17:14:56 Call stack:
+2023-06-06 17:14:56   File "<string>", line 1, in <module>
+2023-06-06 17:14:56   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:14:56     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:14:56   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:14:56     return self._bootstrap(parent_sentinel)
+2023-06-06 17:14:56   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:14:56     self.run()
+2023-06-06 17:14:56   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:14:56 INFO:     172.19.0.1:48818 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:14:56     self._target(*self._args, **self._kwargs)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:14:56     target(sockets=sockets)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:14:56     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:14:56   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:14:56     return loop.run_until_complete(main)
+2023-06-06 17:14:56   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:14:56     self.run_forever()
+2023-06-06 17:14:56   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:14:56     self._run_once()
+2023-06-06 17:14:56   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:14:56     handle._run()
+2023-06-06 17:14:56   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:14:56     self._context.run(self._callback, *self._args)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:14:56     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:14:56     return await self.app(scope, receive, send)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:14:56     await super().__call__(scope, receive, send)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:14:56     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:14:56     await self.app(scope, receive, _send)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:14:56     await self.app(scope, receive, sender)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:14:56     await self.app(scope, receive, send)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:14:56     await route.handle(scope, receive, send)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:14:56     await self.app(scope, receive, send)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:14:56     response = await func(request)
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:14:56     raw_response = await run_endpoint_function(
+2023-06-06 17:14:56   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:14:56     return await dependant.call(**values)
+2023-06-06 17:14:56   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:14:56     author = get_author(presentation.author_id)
+2023-06-06 17:14:56   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:14:56     return call(function, *args, **kwargs)
+2023-06-06 17:14:56   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:14:56     return func(*args, **kwargs)
+2023-06-06 17:14:56   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:14:56     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:14:56 Message: '>>> Error Connecting:'
+2023-06-06 17:14:56 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff84f2c040>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:14:57 CRITICAL:root:Circuit OPEN
+2023-06-06 17:14:57 WARNING:root:Circuit "get_author" is "open", failures: 5
+2023-06-06 17:14:57 WARNING:root:
+2023-06-06 17:15:00 CRITICAL:root:Circuit OPEN
+2023-06-06 17:15:01 CRITICAL:root:Circuit OPEN
+2023-06-06 17:15:01 CRITICAL:root:Circuit OPEN
+2023-06-06 17:15:02 CRITICAL:root:Circuit OPEN
+2023-06-06 17:15:02 CRITICAL:root:Circuit OPEN
+2023-06-06 17:15:03 CRITICAL:root:Circuit OPEN
+2023-06-06 17:15:03 CRITICAL:root:Circuit OPEN
+2023-06-06 17:15:07 WARNING:root:Circuit "get_author" is "half_open", failures: 5
+2023-06-06 17:15:07 WARNING:root:
+2023-06-06 17:17:48 WARNING:root:Circuit "get_author" is "half_open", failures: 5
+2023-06-06 17:17:48 WARNING:root:
+2023-06-06 17:17:58 WARNING:root:Circuit "get_author" is "half_open", failures: 5
+2023-06-06 17:17:58 WARNING:root:
+2023-06-06 17:18:08 WARNING:root:Circuit "get_author" is "half_open", failures: 5
+2023-06-06 17:18:08 WARNING:root:
+2023-06-06 17:18:18 WARNING:root:Circuit "get_author" is "half_open", failures: 5
+2023-06-06 17:18:18 WARNING:root:
+2023-06-06 17:18:24 --- Logging error ---
+2023-06-06 17:18:24 Traceback (most recent call last):
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:18:24     conn = connection.create_connection(
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:18:24     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:18:24   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:18:24     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:18:24 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:18:24 
+2023-06-06 17:18:24 During handling of the above exception, another exception occurred:
+2023-06-06 17:18:24 
+2023-06-06 17:18:24 Traceback (most recent call last):
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:18:24     httplib_response = self._make_request(
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:18:24     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:18:24     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:18:24   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:18:24     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:18:24   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:14:57 INFO:     172.19.0.1:48818 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:15:00 INFO:     172.19.0.1:48818 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:15:01 INFO:     172.19.0.1:48818 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:15:01 INFO:     172.19.0.1:48818 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:15:02 INFO:     172.19.0.1:48818 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:15:02 INFO:     172.19.0.1:48818 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:15:03 INFO:     172.19.0.1:48818 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:15:03 INFO:     172.19.0.1:48818 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:18:24     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:18:24   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:18:24     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:18:24   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:18:24     self.send(msg)
+2023-06-06 17:18:24   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:18:24     self.connect()
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:18:24     conn = self._new_conn()
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:18:24     raise NewConnectionError(
+2023-06-06 17:18:24 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8450cf70>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:18:24 
+2023-06-06 17:18:24 During handling of the above exception, another exception occurred:
+2023-06-06 17:18:24 
+2023-06-06 17:18:24 Traceback (most recent call last):
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:18:24     resp = conn.urlopen(
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:18:24     retries = retries.increment(
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:18:24     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:18:24 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450cf70>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:18:24 
+2023-06-06 17:18:24 During handling of the above exception, another exception occurred:
+2023-06-06 17:18:24 
+2023-06-06 17:18:24 Traceback (most recent call last):
+2023-06-06 17:18:24   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:18:24     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:18:24     return request("get", url, params=params, **kwargs)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:18:24     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:18:24     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:18:24     r = adapter.send(request, **kwargs)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:18:24     raise ConnectionError(e, request=request)
+2023-06-06 17:18:24 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450cf70>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:18:24 
+2023-06-06 17:18:24 During handling of the above exception, another exception occurred:
+2023-06-06 17:18:24 
+2023-06-06 17:18:24 Traceback (most recent call last):
+2023-06-06 17:18:24   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:18:24     msg = self.format(record)
+2023-06-06 17:18:24   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:18:24     return fmt.format(record)
+2023-06-06 17:18:24   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:18:24     record.message = record.getMessage()
+2023-06-06 17:18:24   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:18:24     msg = msg % self.args
+2023-06-06 17:18:24 TypeError: not all arguments converted during string formatting
+2023-06-06 17:18:24 Call stack:
+2023-06-06 17:18:24   File "<string>", line 1, in <module>
+2023-06-06 17:18:24   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:18:24     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:18:24   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:18:24     return self._bootstrap(parent_sentinel)
+2023-06-06 17:18:24   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:18:24     self.run()
+2023-06-06 17:18:24   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:18:24     self._target(*self._args, **self._kwargs)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:18:24     target(sockets=sockets)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:18:24     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:18:24   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:18:24     return loop.run_until_complete(main)
+2023-06-06 17:18:24   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:18:24     self.run_forever()
+2023-06-06 17:18:24   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:18:24     self._run_once()
+2023-06-06 17:18:24   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:18:24     handle._run()
+2023-06-06 17:18:24   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:18:24     self._context.run(self._callback, *self._args)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:18:24     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:18:24     return await self.app(scope, receive, send)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:18:24     await super().__call__(scope, receive, send)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:18:24     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:18:24     await self.app(scope, receive, _send)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:18:24     await self.app(scope, receive, sender)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:18:24     await self.app(scope, receive, send)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:18:24     await route.handle(scope, receive, send)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:18:24     await self.app(scope, receive, send)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:18:24     response = await func(request)
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:18:24     raw_response = await run_endpoint_function(
+2023-06-06 17:18:24   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:18:24     return await dependant.call(**values)
+2023-06-06 17:18:24   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:18:24     author = get_author(presentation.author_id)
+2023-06-06 17:18:24   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:18:24     return call(function, *args, **kwargs)
+2023-06-06 17:18:24   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:18:24     return func(*args, **kwargs)
+2023-06-06 17:18:24   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:18:24     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:18:24 Message: '>>> Error Connecting:'
+2023-06-06 17:18:24 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450cf70>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:18:26 CRITICAL:root:Circuit OPEN
+2023-06-06 17:18:28 WARNING:root:Circuit "get_author" is "open", failures: 6
+2023-06-06 17:18:28 WARNING:root:
+2023-06-06 17:18:38 WARNING:root:Circuit "get_author" is "half_open", failures: 6
+2023-06-06 17:18:38 WARNING:root:
+2023-06-06 17:18:48 WARNING:root:Circuit "get_author" is "half_open", failures: 6
+2023-06-06 17:18:48 WARNING:root:
+2023-06-06 17:18:50 --- Logging error ---
+2023-06-06 17:18:50 Traceback (most recent call last):
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:18:50     conn = connection.create_connection(
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:18:50     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:18:50   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:18:50     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:18:50 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:18:50 
+2023-06-06 17:18:50 During handling of the above exception, another exception occurred:
+2023-06-06 17:18:50 
+2023-06-06 17:18:50 Traceback (most recent call last):
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:18:50     httplib_response = self._make_request(
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:18:50     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:18:50     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:18:50   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:18:50     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:18:50   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:18:50     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:18:50   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:18:50     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:18:50   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:18:50     self.send(msg)
+2023-06-06 17:18:50   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:18:50     self.connect()
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:18:50     conn = self._new_conn()
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:18:50     raise NewConnectionError(
+2023-06-06 17:18:50 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8450df30>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:18:50 
+2023-06-06 17:18:50 During handling of the above exception, another exception occurred:
+2023-06-06 17:18:50 
+2023-06-06 17:18:50 Traceback (most recent call last):
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:18:50     resp = conn.urlopen(
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:18:50     retries = retries.increment(
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:18:24 INFO:     172.19.0.1:49044 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:18:26 INFO:     172.19.0.1:49044 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:18:50     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:18:50 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450df30>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:18:50 
+2023-06-06 17:18:50 During handling of the above exception, another exception occurred:
+2023-06-06 17:18:50 
+2023-06-06 17:18:50 Traceback (most recent call last):
+2023-06-06 17:18:50   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:18:50     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:18:50     return request("get", url, params=params, **kwargs)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:18:50     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:18:50     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:18:50     r = adapter.send(request, **kwargs)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:18:50     raise ConnectionError(e, request=request)
+2023-06-06 17:18:50 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450df30>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:18:50 
+2023-06-06 17:18:50 During handling of the above exception, another exception occurred:
+2023-06-06 17:18:50 
+2023-06-06 17:18:50 Traceback (most recent call last):
+2023-06-06 17:18:50   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:18:50     msg = self.format(record)
+2023-06-06 17:18:50   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:18:50     return fmt.format(record)
+2023-06-06 17:18:50   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:18:50     record.message = record.getMessage()
+2023-06-06 17:18:50   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:18:50     msg = msg % self.args
+2023-06-06 17:18:50 TypeError: not all arguments converted during string formatting
+2023-06-06 17:18:50 Call stack:
+2023-06-06 17:18:50   File "<string>", line 1, in <module>
+2023-06-06 17:18:50   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:18:50     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:18:50   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:18:50     return self._bootstrap(parent_sentinel)
+2023-06-06 17:18:50   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:18:50     self.run()
+2023-06-06 17:18:50   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:18:50     self._target(*self._args, **self._kwargs)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:18:50     target(sockets=sockets)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:18:50     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:18:50   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:18:50     return loop.run_until_complete(main)
+2023-06-06 17:18:50   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:18:50     self.run_forever()
+2023-06-06 17:18:50   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:18:50     self._run_once()
+2023-06-06 17:18:50   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:18:50     handle._run()
+2023-06-06 17:18:50   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:18:50     self._context.run(self._callback, *self._args)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:18:50     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:18:50     return await self.app(scope, receive, send)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:18:50     await super().__call__(scope, receive, send)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:18:50     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:18:50     await self.app(scope, receive, _send)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:18:50     await self.app(scope, receive, sender)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:18:50     await self.app(scope, receive, send)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:18:50     await route.handle(scope, receive, send)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:18:50     await self.app(scope, receive, send)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:18:50     response = await func(request)
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:18:50     raw_response = await run_endpoint_function(
+2023-06-06 17:18:50   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:18:50     return await dependant.call(**values)
+2023-06-06 17:18:50   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:18:50     author = get_author(presentation.author_id)
+2023-06-06 17:18:50   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:18:50     return call(function, *args, **kwargs)
+2023-06-06 17:18:50   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:18:50     return func(*args, **kwargs)
+2023-06-06 17:18:50   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:18:50     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:18:50 Message: '>>> Error Connecting:'
+2023-06-06 17:18:50 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450df30>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:18:52 CRITICAL:root:Circuit OPEN
+2023-06-06 17:18:58 WARNING:root:Circuit "get_author" is "open", failures: 7
+2023-06-06 17:18:58 WARNING:root:
+2023-06-06 17:19:08 WARNING:root:Circuit "get_author" is "half_open", failures: 7
+2023-06-06 17:19:08 WARNING:root:
+2023-06-06 17:18:50 INFO:     172.19.0.1:49042 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:18:52 INFO:     172.19.0.1:49042 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:19:18 WARNING:root:Circuit "get_author" is "half_open", failures: 7
+2023-06-06 17:19:18 WARNING:root:
+2023-06-06 17:19:28 WARNING:root:Circuit "get_author" is "half_open", failures: 7
+2023-06-06 17:19:28 WARNING:root:
+2023-06-06 17:19:31 --- Logging error ---
+2023-06-06 17:19:31 Traceback (most recent call last):
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:19:31     conn = connection.create_connection(
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:19:31     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:19:31   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:19:31     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:19:31 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:19:31 
+2023-06-06 17:19:31 During handling of the above exception, another exception occurred:
+2023-06-06 17:19:31 
+2023-06-06 17:19:31 Traceback (most recent call last):
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:19:31     httplib_response = self._make_request(
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:19:31     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:19:31     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:19:31   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:19:31     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:19:31   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:19:31     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:19:31   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:19:31     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:19:31   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:19:31     self.send(msg)
+2023-06-06 17:19:31   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:19:31     self.connect()
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:19:31     conn = self._new_conn()
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:19:31     raise NewConnectionError(
+2023-06-06 17:19:31 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8450eec0>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:19:31 
+2023-06-06 17:19:31 During handling of the above exception, another exception occurred:
+2023-06-06 17:19:31 
+2023-06-06 17:19:31 Traceback (most recent call last):
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:19:31     resp = conn.urlopen(
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:19:31     retries = retries.increment(
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:19:31     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:19:31 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450eec0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:19:31 
+2023-06-06 17:19:31 During handling of the above exception, another exception occurred:
+2023-06-06 17:19:31 
+2023-06-06 17:19:31 Traceback (most recent call last):
+2023-06-06 17:19:31   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:19:31     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:19:31     return request("get", url, params=params, **kwargs)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:19:31     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:19:31     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:19:31     r = adapter.send(request, **kwargs)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:19:31     raise ConnectionError(e, request=request)
+2023-06-06 17:19:31 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450eec0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:19:31 
+2023-06-06 17:19:31 During handling of the above exception, another exception occurred:
+2023-06-06 17:19:31 
+2023-06-06 17:19:31 Traceback (most recent call last):
+2023-06-06 17:19:31   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:19:31     msg = self.format(record)
+2023-06-06 17:19:31   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:19:31     return fmt.format(record)
+2023-06-06 17:19:31   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:19:31     record.message = record.getMessage()
+2023-06-06 17:19:31   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:19:31     msg = msg % self.args
+2023-06-06 17:19:31 TypeError: not all arguments converted during string formatting
+2023-06-06 17:19:31 Call stack:
+2023-06-06 17:19:31   File "<string>", line 1, in <module>
+2023-06-06 17:19:31   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:19:31 INFO:     172.19.0.1:36776 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:19:31     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:19:31   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:19:31     return self._bootstrap(parent_sentinel)
+2023-06-06 17:19:31   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:19:31     self.run()
+2023-06-06 17:19:31   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:19:31     self._target(*self._args, **self._kwargs)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:19:31     target(sockets=sockets)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:19:31     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:19:31   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:19:31     return loop.run_until_complete(main)
+2023-06-06 17:19:31   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:19:31     self.run_forever()
+2023-06-06 17:19:31   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:19:31     self._run_once()
+2023-06-06 17:19:31   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:19:31     handle._run()
+2023-06-06 17:19:31   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:19:31     self._context.run(self._callback, *self._args)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:19:31     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:19:31     return await self.app(scope, receive, send)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:19:31     await super().__call__(scope, receive, send)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:19:31     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:19:31     await self.app(scope, receive, _send)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:19:31     await self.app(scope, receive, sender)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:19:31     await self.app(scope, receive, send)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:19:31     await route.handle(scope, receive, send)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:19:31     await self.app(scope, receive, send)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:19:31     response = await func(request)
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:19:31     raw_response = await run_endpoint_function(
+2023-06-06 17:19:31   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:19:31     return await dependant.call(**values)
+2023-06-06 17:19:31   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:19:31     author = get_author(presentation.author_id)
+2023-06-06 17:19:31   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:19:31     return call(function, *args, **kwargs)
+2023-06-06 17:19:31   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:19:31     return func(*args, **kwargs)
+2023-06-06 17:19:31   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:19:31     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:19:31 Message: '>>> Error Connecting:'
+2023-06-06 17:19:31 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450eec0>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:19:32 CRITICAL:root:Circuit OPEN
+2023-06-06 17:19:38 WARNING:root:Circuit "get_author" is "open", failures: 8
+2023-06-06 17:19:38 WARNING:root:
+2023-06-06 17:19:48 WARNING:root:Circuit "get_author" is "half_open", failures: 8
+2023-06-06 17:19:48 WARNING:root:
+2023-06-06 17:19:58 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:19:58 WARNING:root:
+2023-06-06 17:20:08 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:19:32 INFO:     172.19.0.1:36776 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:19:58 Moore
+2023-06-06 17:19:58 INFO:     172.19.0.1:49030 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:20:08 WARNING:root:
+2023-06-06 17:20:18 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:20:19 WARNING:root:
+2023-06-06 17:20:29 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:20:29 WARNING:root:
+2023-06-06 17:20:39 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:20:39 WARNING:root:
+2023-06-06 17:20:49 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:20:49 WARNING:root:
+2023-06-06 17:20:59 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:20:59 WARNING:root:
+2023-06-06 17:21:09 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:21:09 WARNING:root:
+2023-06-06 17:21:19 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:21:19 WARNING:root:
+2023-06-06 17:21:29 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:21:29 WARNING:root:
+2023-06-06 17:21:39 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:21:39 WARNING:root:
+2023-06-06 17:21:49 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:21:49 WARNING:root:
+2023-06-06 17:21:59 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:21:59 WARNING:root:
+2023-06-06 17:22:09 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:22:09 WARNING:root:
+2023-06-06 17:22:19 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:22:19 WARNING:root:
+2023-06-06 17:22:29 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:22:29 WARNING:root:
+2023-06-06 17:22:39 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:22:39 WARNING:root:
+2023-06-06 17:22:49 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:22:49 WARNING:root:
+2023-06-06 17:22:59 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:22:59 WARNING:root:
+2023-06-06 17:23:09 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:23:09 WARNING:root:
+2023-06-06 17:23:19 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:23:19 WARNING:root:
+2023-06-06 17:23:29 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:23:29 WARNING:root:
+2023-06-06 17:23:39 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:23:39 WARNING:root:
+2023-06-06 17:23:49 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:23:49 WARNING:root:
+2023-06-06 17:23:50 ERROR:    Exception in ASGI application
+2023-06-06 17:23:50 Traceback (most recent call last):
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:23:50     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:23:50     return await self.app(scope, receive, send)
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:23:50     await super().__call__(scope, receive, send)
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:23:50     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 184, in __call__
+2023-06-06 17:23:50     raise exc
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:23:50     await self.app(scope, receive, _send)
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 79, in __call__
+2023-06-06 17:23:50     raise exc
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:23:50     await self.app(scope, receive, sender)
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+2023-06-06 17:23:50     raise e
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:23:50     await self.app(scope, receive, send)
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:23:50     await route.handle(scope, receive, send)
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:23:50     await self.app(scope, receive, send)
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:23:50     response = await func(request)
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:23:50     raw_response = await run_endpoint_function(
+2023-06-06 17:23:50   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:23:50     return await dependant.call(**values)
+2023-06-06 17:23:50   File "/./service_main.py", line 104, in read_presentation
+2023-06-06 17:23:50     presentation = get_presentation(title)
+2023-06-06 17:23:50   File "/./service_main.py", line 66, in get_presentation
+2023-06-06 17:23:50     presentation = Presentation(**response_presentation.json()[0])
+2023-06-06 17:23:50 IndexError: list index out of range
+2023-06-06 17:23:59 WARNING:root:Circuit "get_author" is "closed", failures: 0
+2023-06-06 17:23:59 WARNING:root:
+2023-06-06 17:24:07 --- Logging error ---
+2023-06-06 17:24:07 Traceback (most recent call last):
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:24:07     conn = connection.create_connection(
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:24:07     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:24:07   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:24:07     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:24:07 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:24:07 
+2023-06-06 17:24:07 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:07 
+2023-06-06 17:24:07 Traceback (most recent call last):
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:24:07     httplib_response = self._make_request(
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:24:07     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:24:07     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:24:07   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:24:07     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:24:07   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:24:07     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:24:07   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:24:07     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:24:07   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:24:07     self.send(msg)
+2023-06-06 17:24:07   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:24:07     self.connect()
+2023-06-06 17:23:50 Moore
+2023-06-06 17:23:50 INFO:     172.19.0.1:50652 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:23:50 Moore
+2023-06-06 17:23:50 INFO:     172.19.0.1:43870 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:23:50 Moore
+2023-06-06 17:23:50 INFO:     172.19.0.1:35294 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:23:50 Moore
+2023-06-06 17:23:50 INFO:     172.19.0.1:43002 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:23:50 Moore
+2023-06-06 17:23:50 INFO:     172.19.0.1:51238 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:23:50 Moore
+2023-06-06 17:23:50 INFO:     172.19.0.1:57008 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:23:50 Moore
+2023-06-06 17:23:50 INFO:     172.19.0.1:49072 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:23:50 Moore
+2023-06-06 17:23:50 INFO:     172.19.0.1:49862 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:23:50 INFO:     172.19.0.1:32806 - "GET /presentationsAndAuthor/First HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:23:50 Moore
+2023-06-06 17:23:50 INFO:     172.19.0.1:32812 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:24:07     conn = self._new_conn()
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:24:07     raise NewConnectionError(
+2023-06-06 17:24:07 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8450c880>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:24:07 
+2023-06-06 17:24:07 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:07 
+2023-06-06 17:24:07 Traceback (most recent call last):
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:24:07     resp = conn.urlopen(
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:24:07     retries = retries.increment(
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:24:07     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:24:07 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450c880>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:24:07 
+2023-06-06 17:24:07 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:07 
+2023-06-06 17:24:07 Traceback (most recent call last):
+2023-06-06 17:24:07   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:24:07     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:24:07     return request("get", url, params=params, **kwargs)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:24:07     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:24:07     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:24:07     r = adapter.send(request, **kwargs)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:24:07     raise ConnectionError(e, request=request)
+2023-06-06 17:24:07 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450c880>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:24:07 
+2023-06-06 17:24:07 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:07 
+2023-06-06 17:24:07 Traceback (most recent call last):
+2023-06-06 17:24:07   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:24:07     msg = self.format(record)
+2023-06-06 17:24:07   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:24:07     return fmt.format(record)
+2023-06-06 17:24:07   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:24:07     record.message = record.getMessage()
+2023-06-06 17:24:07   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:24:07     msg = msg % self.args
+2023-06-06 17:24:07 TypeError: not all arguments converted during string formatting
+2023-06-06 17:24:07 Call stack:
+2023-06-06 17:24:07   File "<string>", line 1, in <module>
+2023-06-06 17:24:07   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:24:07     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:24:07   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:24:07     return self._bootstrap(parent_sentinel)
+2023-06-06 17:24:07   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:24:07     self.run()
+2023-06-06 17:24:07   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:24:07     self._target(*self._args, **self._kwargs)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:24:07     target(sockets=sockets)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:24:07     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:24:07   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:24:07     return loop.run_until_complete(main)
+2023-06-06 17:24:07   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:24:07     self.run_forever()
+2023-06-06 17:24:07   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:24:07     self._run_once()
+2023-06-06 17:24:07   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:24:07     handle._run()
+2023-06-06 17:24:07   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:24:07     self._context.run(self._callback, *self._args)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:24:07     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:24:07     return await self.app(scope, receive, send)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:24:07     await super().__call__(scope, receive, send)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:24:07     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:24:07     await self.app(scope, receive, _send)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:24:07     await self.app(scope, receive, sender)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:24:07     await self.app(scope, receive, send)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:24:07     await route.handle(scope, receive, send)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:24:07     await self.app(scope, receive, send)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:24:07     response = await func(request)
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:24:07     raw_response = await run_endpoint_function(
+2023-06-06 17:24:07   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:24:07     return await dependant.call(**values)
+2023-06-06 17:24:07   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:24:07     author = get_author(presentation.author_id)
+2023-06-06 17:24:07   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:24:07     return call(function, *args, **kwargs)
+2023-06-06 17:24:07   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:24:07     return func(*args, **kwargs)
+2023-06-06 17:24:07   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:24:07     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:24:07 Message: '>>> Error Connecting:'
+2023-06-06 17:24:07 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450c880>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:24:09 WARNING:root:Circuit "get_author" is "closed", failures: 1
+2023-06-06 17:24:09 WARNING:root:
+2023-06-06 17:24:11 --- Logging error ---
+2023-06-06 17:24:11 Traceback (most recent call last):
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:24:11     conn = connection.create_connection(
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:24:11     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:24:11   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:24:11     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:24:11 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 Traceback (most recent call last):
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:24:11     httplib_response = self._make_request(
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:24:11     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:24:11     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:24:11     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:24:11     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:24:11     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:24:11     self.send(msg)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:24:11     self.connect()
+2023-06-06 17:24:07 INFO:     172.19.0.1:48910 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:24:11     conn = self._new_conn()
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:24:11     raise NewConnectionError(
+2023-06-06 17:24:11 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8452da20>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 Traceback (most recent call last):
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:24:11     resp = conn.urlopen(
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:24:11     retries = retries.increment(
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:24:11     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:24:11 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8452da20>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 Traceback (most recent call last):
+2023-06-06 17:24:11   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:24:11     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:24:11     return request("get", url, params=params, **kwargs)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:24:11     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:24:11     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:24:11     r = adapter.send(request, **kwargs)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:24:11     raise ConnectionError(e, request=request)
+2023-06-06 17:24:11 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8452da20>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 Traceback (most recent call last):
+2023-06-06 17:24:11   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:24:11     msg = self.format(record)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:24:11     return fmt.format(record)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:24:11     record.message = record.getMessage()
+2023-06-06 17:24:11   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:24:11     msg = msg % self.args
+2023-06-06 17:24:11 TypeError: not all arguments converted during string formatting
+2023-06-06 17:24:11 Call stack:
+2023-06-06 17:24:11   File "<string>", line 1, in <module>
+2023-06-06 17:24:11   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:24:11     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:24:11     return self._bootstrap(parent_sentinel)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:24:11     self.run()
+2023-06-06 17:24:11   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:24:11     self._target(*self._args, **self._kwargs)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:24:11     target(sockets=sockets)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:24:11     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:24:11   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:24:11     return loop.run_until_complete(main)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:24:11     self.run_forever()
+2023-06-06 17:24:11   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:24:11     self._run_once()
+2023-06-06 17:24:11   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:24:11     handle._run()
+2023-06-06 17:24:11   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:24:11     self._context.run(self._callback, *self._args)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:24:11     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:24:11     return await self.app(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:24:11     await super().__call__(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:24:11     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:24:11     await self.app(scope, receive, _send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:24:11     await self.app(scope, receive, sender)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:24:11     await self.app(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:24:11     await route.handle(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:24:11     await self.app(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:24:11     response = await func(request)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:24:11     raw_response = await run_endpoint_function(
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:24:11     return await dependant.call(**values)
+2023-06-06 17:24:11   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:24:11     author = get_author(presentation.author_id)
+2023-06-06 17:24:11   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:24:11     return call(function, *args, **kwargs)
+2023-06-06 17:24:11   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:24:11     return func(*args, **kwargs)
+2023-06-06 17:24:11   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:24:11     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:24:11 Message: '>>> Error Connecting:'
+2023-06-06 17:24:11 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8452da20>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:24:11 --- Logging error ---
+2023-06-06 17:24:11 Traceback (most recent call last):
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:24:11     conn = connection.create_connection(
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:24:11     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:24:11   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:24:11     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:24:11 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 Traceback (most recent call last):
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:24:11     httplib_response = self._make_request(
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:24:11     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:24:11     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:24:11     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:24:11     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:24:11     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:24:11     self.send(msg)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:24:11     self.connect()
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:24:11     conn = self._new_conn()
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:24:11     raise NewConnectionError(
+2023-06-06 17:24:11 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8450fa00>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 Traceback (most recent call last):
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:24:11     resp = conn.urlopen(
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:24:11     retries = retries.increment(
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:24:11     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:24:11 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450fa00>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 Traceback (most recent call last):
+2023-06-06 17:24:11   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:24:11     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:24:11     return request("get", url, params=params, **kwargs)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:24:11     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:24:11     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:24:11     r = adapter.send(request, **kwargs)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:24:11     raise ConnectionError(e, request=request)
+2023-06-06 17:24:11 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450fa00>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:11 
+2023-06-06 17:24:11 Traceback (most recent call last):
+2023-06-06 17:24:11   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:24:11     msg = self.format(record)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:24:11     return fmt.format(record)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:24:11     record.message = record.getMessage()
+2023-06-06 17:24:11   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:24:11     msg = msg % self.args
+2023-06-06 17:24:11 TypeError: not all arguments converted during string formatting
+2023-06-06 17:24:11 Call stack:
+2023-06-06 17:24:11   File "<string>", line 1, in <module>
+2023-06-06 17:24:11 INFO:     172.19.0.1:48910 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:24:11   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:24:11     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:24:11     return self._bootstrap(parent_sentinel)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:24:11     self.run()
+2023-06-06 17:24:11   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:24:11     self._target(*self._args, **self._kwargs)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:24:11     target(sockets=sockets)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:24:11     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:24:11   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:24:11     return loop.run_until_complete(main)
+2023-06-06 17:24:11   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:24:11     self.run_forever()
+2023-06-06 17:24:11   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:24:11     self._run_once()
+2023-06-06 17:24:11   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:24:11     handle._run()
+2023-06-06 17:24:11   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:24:11     self._context.run(self._callback, *self._args)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:24:11     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:24:11     return await self.app(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:24:11     await super().__call__(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:24:11     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:24:11     await self.app(scope, receive, _send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:24:11     await self.app(scope, receive, sender)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:24:11     await self.app(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:24:11     await route.handle(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:24:11     await self.app(scope, receive, send)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:24:11     response = await func(request)
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:24:11     raw_response = await run_endpoint_function(
+2023-06-06 17:24:11   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:24:11     return await dependant.call(**values)
+2023-06-06 17:24:11   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:24:11     author = get_author(presentation.author_id)
+2023-06-06 17:24:11   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:24:11     return call(function, *args, **kwargs)
+2023-06-06 17:24:11   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:24:11     return func(*args, **kwargs)
+2023-06-06 17:24:11   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:24:11     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:24:11 Message: '>>> Error Connecting:'
+2023-06-06 17:24:11 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450fa00>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:24:12 --- Logging error ---
+2023-06-06 17:24:12 Traceback (most recent call last):
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:24:12     conn = connection.create_connection(
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:24:12     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:24:12   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:24:12     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:24:12 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:24:12 
+2023-06-06 17:24:12 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:12 
+2023-06-06 17:24:12 Traceback (most recent call last):
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:24:12     httplib_response = self._make_request(
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:24:12     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:24:12     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:24:12   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:24:12     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:24:12   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:24:12     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:24:12   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:24:12     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:24:12   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:24:12     self.send(msg)
+2023-06-06 17:24:12   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:24:12     self.connect()
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:24:12     conn = self._new_conn()
+2023-06-06 17:24:11 INFO:     172.19.0.1:48910 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:24:12     raise NewConnectionError(
+2023-06-06 17:24:12 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8450e710>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:24:12 
+2023-06-06 17:24:12 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:12 
+2023-06-06 17:24:12 Traceback (most recent call last):
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:24:12     resp = conn.urlopen(
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:24:12     retries = retries.increment(
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:24:12     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:24:12 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450e710>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:24:12 
+2023-06-06 17:24:12 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:12 
+2023-06-06 17:24:12 Traceback (most recent call last):
+2023-06-06 17:24:12   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:24:12     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:24:12     return request("get", url, params=params, **kwargs)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:24:12     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:24:12     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:24:12     r = adapter.send(request, **kwargs)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:24:12     raise ConnectionError(e, request=request)
+2023-06-06 17:24:12 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450e710>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:24:12 
+2023-06-06 17:24:12 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:12 
+2023-06-06 17:24:12 Traceback (most recent call last):
+2023-06-06 17:24:12   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:24:12     msg = self.format(record)
+2023-06-06 17:24:12   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:24:12     return fmt.format(record)
+2023-06-06 17:24:12   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:24:12     record.message = record.getMessage()
+2023-06-06 17:24:12   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:24:12     msg = msg % self.args
+2023-06-06 17:24:12 TypeError: not all arguments converted during string formatting
+2023-06-06 17:24:12 Call stack:
+2023-06-06 17:24:12   File "<string>", line 1, in <module>
+2023-06-06 17:24:12   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:24:12     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:24:12   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:24:12     return self._bootstrap(parent_sentinel)
+2023-06-06 17:24:12   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:24:12     self.run()
+2023-06-06 17:24:12   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:24:12     self._target(*self._args, **self._kwargs)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:24:12     target(sockets=sockets)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:24:12     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:24:12   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:24:12     return loop.run_until_complete(main)
+2023-06-06 17:24:12   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:24:12     self.run_forever()
+2023-06-06 17:24:12   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:24:12     self._run_once()
+2023-06-06 17:24:12   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:24:12     handle._run()
+2023-06-06 17:24:12   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:24:12     self._context.run(self._callback, *self._args)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:24:12     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:24:12     return await self.app(scope, receive, send)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:24:12     await super().__call__(scope, receive, send)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:24:12     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:24:12     await self.app(scope, receive, _send)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:24:12     await self.app(scope, receive, sender)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:24:12     await self.app(scope, receive, send)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:24:12     await route.handle(scope, receive, send)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:24:12     await self.app(scope, receive, send)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:24:12     response = await func(request)
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:24:12     raw_response = await run_endpoint_function(
+2023-06-06 17:24:12   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:24:12     return await dependant.call(**values)
+2023-06-06 17:24:12   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:24:12     author = get_author(presentation.author_id)
+2023-06-06 17:24:12   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:24:12     return call(function, *args, **kwargs)
+2023-06-06 17:24:12   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:24:12     return func(*args, **kwargs)
+2023-06-06 17:24:12   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:24:12     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:24:12 Message: '>>> Error Connecting:'
+2023-06-06 17:24:12 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450e710>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:24:13 --- Logging error ---
+2023-06-06 17:24:13 Traceback (most recent call last):
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 174, in _new_conn
+2023-06-06 17:24:13     conn = connection.create_connection(
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py", line 72, in create_connection
+2023-06-06 17:24:13     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+2023-06-06 17:24:13   File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+2023-06-06 17:24:13     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2023-06-06 17:24:13 socket.gaierror: [Errno -2] Name or service not known
+2023-06-06 17:24:13 
+2023-06-06 17:24:13 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:12 INFO:     172.19.0.1:48910 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:24:13 
+2023-06-06 17:24:13 Traceback (most recent call last):
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 703, in urlopen
+2023-06-06 17:24:13     httplib_response = self._make_request(
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 398, in _make_request
+2023-06-06 17:24:13     conn.request(method, url, **httplib_request_kw)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 239, in request
+2023-06-06 17:24:13     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+2023-06-06 17:24:13   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+2023-06-06 17:24:13     self._send_request(method, url, body, headers, encode_chunked)
+2023-06-06 17:24:13   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+2023-06-06 17:24:13     self.endheaders(body, encode_chunked=encode_chunked)
+2023-06-06 17:24:13   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+2023-06-06 17:24:13     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-06-06 17:24:13   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+2023-06-06 17:24:13     self.send(msg)
+2023-06-06 17:24:13   File "/usr/lib/python3.10/http/client.py", line 975, in send
+2023-06-06 17:24:13     self.connect()
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 205, in connect
+2023-06-06 17:24:13     conn = self._new_conn()
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/urllib3/connection.py", line 186, in _new_conn
+2023-06-06 17:24:13     raise NewConnectionError(
+2023-06-06 17:24:13 urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff8450cdc0>: Failed to establish a new connection: [Errno -2] Name or service not known
+2023-06-06 17:24:13 
+2023-06-06 17:24:13 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:13 
+2023-06-06 17:24:13 Traceback (most recent call last):
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 489, in send
+2023-06-06 17:24:13     resp = conn.urlopen(
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py", line 787, in urlopen
+2023-06-06 17:24:13     retries = retries.increment(
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py", line 592, in increment
+2023-06-06 17:24:13     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+2023-06-06 17:24:13 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450cdc0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:24:13 
+2023-06-06 17:24:13 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:13 
+2023-06-06 17:24:13 Traceback (most recent call last):
+2023-06-06 17:24:13   File "/./service_main.py", line 74, in get_author
+2023-06-06 17:24:13     response_author = requests.get("http://" + service_author + "/authors/" + str(id))
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 73, in get
+2023-06-06 17:24:13     return request("get", url, params=params, **kwargs)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/requests/api.py", line 59, in request
+2023-06-06 17:24:13     return session.request(method=method, url=url, **kwargs)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 587, in request
+2023-06-06 17:24:13     resp = self.send(prep, **send_kwargs)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/requests/sessions.py", line 701, in send
+2023-06-06 17:24:13     r = adapter.send(request, **kwargs)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/requests/adapters.py", line 565, in send
+2023-06-06 17:24:13     raise ConnectionError(e, request=request)
+2023-06-06 17:24:13 requests.exceptions.ConnectionError: HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450cdc0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-06-06 17:24:13 
+2023-06-06 17:24:13 During handling of the above exception, another exception occurred:
+2023-06-06 17:24:13 
+2023-06-06 17:24:13 Traceback (most recent call last):
+2023-06-06 17:24:13   File "/usr/lib/python3.10/logging/__init__.py", line 1100, in emit
+2023-06-06 17:24:13     msg = self.format(record)
+2023-06-06 17:24:13   File "/usr/lib/python3.10/logging/__init__.py", line 943, in format
+2023-06-06 17:24:13     return fmt.format(record)
+2023-06-06 17:24:13   File "/usr/lib/python3.10/logging/__init__.py", line 678, in format
+2023-06-06 17:24:13     record.message = record.getMessage()
+2023-06-06 17:24:13   File "/usr/lib/python3.10/logging/__init__.py", line 368, in getMessage
+2023-06-06 17:24:13     msg = msg % self.args
+2023-06-06 17:24:13 TypeError: not all arguments converted during string formatting
+2023-06-06 17:24:13 Call stack:
+2023-06-06 17:24:13   File "<string>", line 1, in <module>
+2023-06-06 17:24:13   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+2023-06-06 17:24:13     exitcode = _main(fd, parent_sentinel)
+2023-06-06 17:24:13   File "/usr/lib/python3.10/multiprocessing/spawn.py", line 129, in _main
+2023-06-06 17:24:13     return self._bootstrap(parent_sentinel)
+2023-06-06 17:24:13   File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+2023-06-06 17:24:13     self.run()
+2023-06-06 17:24:13   File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+2023-06-06 17:24:13     self._target(*self._args, **self._kwargs)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/uvicorn/_subprocess.py", line 76, in subprocess_started
+2023-06-06 17:24:13     target(sockets=sockets)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/uvicorn/server.py", line 60, in run
+2023-06-06 17:24:13     return asyncio.run(self.serve(sockets=sockets))
+2023-06-06 17:24:13   File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+2023-06-06 17:24:13     return loop.run_until_complete(main)
+2023-06-06 17:24:13   File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+2023-06-06 17:24:13     self.run_forever()
+2023-06-06 17:24:13   File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+2023-06-06 17:24:13     self._run_once()
+2023-06-06 17:24:13   File "/usr/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+2023-06-06 17:24:13     handle._run()
+2023-06-06 17:24:13   File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+2023-06-06 17:24:13     self._context.run(self._callback, *self._args)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/uvicorn/protocols/http/httptools_impl.py", line 419, in run_asgi
+2023-06-06 17:24:13     result = await app(  # type: ignore[func-returns-value]
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+2023-06-06 17:24:13     return await self.app(scope, receive, send)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/fastapi/applications.py", line 271, in __call__
+2023-06-06 17:24:13     await super().__call__(scope, receive, send)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/starlette/applications.py", line 118, in __call__
+2023-06-06 17:24:13     await self.middleware_stack(scope, receive, send)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+2023-06-06 17:24:13     await self.app(scope, receive, _send)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/starlette/middleware/exceptions.py", line 68, in __call__
+2023-06-06 17:24:13     await self.app(scope, receive, sender)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2023-06-06 17:24:13     await self.app(scope, receive, send)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 706, in __call__
+2023-06-06 17:24:13     await route.handle(scope, receive, send)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 276, in handle
+2023-06-06 17:24:13     await self.app(scope, receive, send)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/starlette/routing.py", line 66, in app
+2023-06-06 17:24:13     response = await func(request)
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 237, in app
+2023-06-06 17:24:13     raw_response = await run_endpoint_function(
+2023-06-06 17:24:13   File "/usr/local/lib/python3.10/dist-packages/fastapi/routing.py", line 163, in run_endpoint_function
+2023-06-06 17:24:13     return await dependant.call(**values)
+2023-06-06 17:24:13   File "/./service_main.py", line 105, in read_presentation
+2023-06-06 17:24:13     author = get_author(presentation.author_id)
+2023-06-06 17:24:13   File "/./circuitbreaker.py", line 159, in wrapper
+2023-06-06 17:24:13     return call(function, *args, **kwargs)
+2023-06-06 17:24:13   File "/./circuitbreaker.py", line 170, in call
+2023-06-06 17:24:13     return func(*args, **kwargs)
+2023-06-06 17:24:13   File "/./service_main.py", line 76, in get_author
+2023-06-06 17:24:13     logging.warning(">>> Error Connecting:", errc)
+2023-06-06 17:24:13 Message: '>>> Error Connecting:'
+2023-06-06 17:24:13 Arguments: (ConnectionError(MaxRetryError("HTTPConnectionPool(host='service_author', port=8081): Max retries exceeded with url: /authors/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff8450cdc0>: Failed to establish a new connection: [Errno -2] Name or service not known'))")),)
+2023-06-06 17:24:14 CRITICAL:root:Circuit OPEN
+2023-06-06 17:24:15 CRITICAL:root:Circuit OPEN
+2023-06-06 17:24:13 INFO:     172.19.0.1:48910 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 500 Internal Server Error
+2023-06-06 17:24:14 INFO:     172.19.0.1:48910 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:24:15 INFO:     172.19.0.1:48910 - "GET /presentationsAndAuthor/First%20Presentation HTTP/1.1" 200 OK
+2023-06-06 17:24:19 WARNING:root:Circuit "get_author" is "open", failures: 5
+2023-06-06 17:24:19 WARNING:root:
